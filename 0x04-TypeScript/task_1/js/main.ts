@@ -19,7 +19,7 @@ interface printTeacherFunction {
 //     return `${firstName}. ${lastName}`;
 // }
 
-function printTeacher(firstName: string, lastName:string){
+function printTeacher(firstName: string = "John", lastName:string = "Doe"){
     return `${firstName}. ${lastName}`;
 }
 
