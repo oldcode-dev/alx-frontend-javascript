@@ -13,6 +13,10 @@ interface Directors extends Teacher {
 }
 
 
+interface Director extends Teacher {
+    numberOfReports: number;
+}
+
 const director1: Directors = {
   firstName: 'John',
   lastName: 'Doe',
