@@ -26,10 +26,11 @@ var Teacher = /** @class */ (function () {
     };
     return Teacher;
 }());
-function createEmployee(salary) {
-    if (parseInt(salary) < 500) {
-        return new Teacher;
+function createEmployee(income) {
+    var salary = Number(income);
+    if (salary < 500) {
+        return new Teacher();
     }
-    return new Director;
+    return new Director();
 }
 console.log(createEmployee("200"));
