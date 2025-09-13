@@ -12,14 +12,14 @@ interface Director extends Teacher {
 }
 
 interface printTeacherFunction {
-    (firstName: string, lastName: string): string;
+    printTeacher(firstName: string, lastName: string): string;
 }
 
 // const printTeacher: printTeacherFunction = (firstName, lastName) => {
 //     return `${firstName}. ${lastName}`;
 // }
 
-function printTeacher(firstName: string = "John", lastName:string = "Doe"){
+function printTeacher(firstName: string = "John", lastName: string = "Doe") {
     return `${firstName}. ${lastName}`;
 }
 
@@ -32,28 +32,79 @@ interface Student {
     displayName(): string;
 }
 
-interface StudentConstructor{
-    new (firstName: string, lastName:string): Student;
+interface StudentConstructor {
+    new(firstName: string, lastName: string): Student;
 }
 
 class StudentClass {
-     firstName: string;
-     lastName: string;
+    firstName: string;
+    lastName: string;
 
-    constructor(firstName: string, lastName: string){
+    constructor(firstName: string, lastName: string) {
         this.firstName = firstName;
         this.lastName = lastName;
     }
 
-    workOnHomework(): string{
+    workOnHomework(): string {
         return 'Currently working';
     }
 
-    displayName():string {
+    displayName(): string {
         return this.lastName;
     }
 }
 
 
+interface DirectorInterface {
+    workFromHome(): string;
+    getCoffeeBreak(): string;
+    workDirectorTasks(): string;
+}
+
+interface TeacherInterface {
+    workFromHome(): string;
+    getCoffeeBreak(): string;
+    workTeacherTasks(): string;
+}
+
+class Director implements DirectorInterface {
+    workFromHome(): string {
+        return "Working from home";
+    }
+
+    getCoffeeBreak(): string {
+        return "Getting a coffee break";
+    }
+
+    workDirectorTasks(): string {
+        return "Getting to director tasks";
+    }
+}
+
+
+class Teacher implements TeacherInterface {
+    workFromHome(): string {
+        return "Working from home";
+    }
+
+    getCoffeeBreak(): string {
+        return "Getting a coffee break";
+    }
+
+    workTeacherTasks(): string {
+        return "Getting to director tasks";
+    }
+}
+
+
+function createEmployee(salary: string){
+    if (parseInt(salary) < 500){
+        return new Teacher;
+    }
+
+    return new Director;
+}
+
+console.log(createEmployee("200"))
 
 
