@@ -8,6 +8,10 @@ interface Teacher {
 }
 
 
-interface Directors extends Teacher {
+interface Directors {
     numberOfReports: number;
+}
+
+interface Directors extends Teacher {
+
 }
