@@ -23,6 +23,37 @@ function printTeacher(firstName: string = "John", lastName:string = "Doe"){
     return `${firstName}. ${lastName}`;
 }
 
+// Writing a class
+
+interface Student {
+    firstName: string;
+    lastName: string;
+    workOnHomeWork(): string;
+    displayName(): string;
+}
+
+interface StudentConstructor{
+    new (firstName: string, lastName:string): Student;
+}
+
+class StudentClass implements Student {
+     firstName: string;
+     lastName: string;
+
+    constructor(firstName: string, lastName: string){
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
+    workOnHomeWork(): string{
+        return 'Currently working';
+    }
+
+    displayName():string {
+        return this.lastName;
+    }
+}
+
 
 
 
