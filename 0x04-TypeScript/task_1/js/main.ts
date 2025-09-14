@@ -15,7 +15,7 @@ interface printTeacherFunction {
     printTeacher(firstName: string, lastName: string): string;
 }
 
-interface printTeacher {
+type printTeacher = {
     firstName: string;
     lastName: string;
 }
