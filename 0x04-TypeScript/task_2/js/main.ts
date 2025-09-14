@@ -72,6 +72,7 @@ function executeWork(employee: object){
 
 type Subjects = "Math" | "History";
 
+
 function teachClass(todayClass:Subjects): string{
     if (todayClass === "Math"){
         return "Teaching Math";
