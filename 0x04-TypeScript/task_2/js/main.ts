@@ -69,6 +69,16 @@ function executeWork(employee: object){
     return teacher.workTeacherTasks();
 }
 
-console.log(executeWork(createEmployee("200")));
+
+type Subjects = "Math" | "History";
+
+function teachClass(todayClass: string): string{
+    if (todayClass === "Math"){
+        return "Teaching Math";
+    }else if (todayClass === "History"){
+        return "Teaching History";
+    }
+} 
+
 
 
