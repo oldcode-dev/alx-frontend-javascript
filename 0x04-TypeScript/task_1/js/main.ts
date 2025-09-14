@@ -15,11 +15,12 @@ interface printTeacherFunction {
     printTeacher(firstName: string, lastName: string): string;
 }
 
-// const printTeacher: printTeacherFunction = (firstName, lastName) => {
-//     return `${firstName}. ${lastName}`;
-// }
+interface printTeacher {
+    firstName: string;
+    lastName: string;
+}
 
-function printTeacher(firstName: string = "John", lastName: string = "Doe") {
+function printTeacher({firstName, lastName}: printTeacher) {
     return `${firstName}. ${lastName}`;
 }
 
