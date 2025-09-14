@@ -49,6 +49,26 @@ function createEmployee(income: string | number){
     return new Director();
 }
 
-console.log(createEmployee("200"))
+
+
+function isDirector(employee: object){
+    if (employee === Director){
+        return true;
+    }
+
+    return false;
+}
+
+function executeWork(employee: object){
+    if(employee === Director){
+        const director = new Director();
+        return director.workDirectorTasks();
+    }
+
+    const teacher = new Teacher();
+    return teacher.workTeacherTasks();
+}
+
+console.log(executeWork(createEmployee("200")));
 
 

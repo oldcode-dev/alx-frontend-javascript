@@ -33,4 +33,18 @@ function createEmployee(income) {
     }
     return new Director();
 }
-console.log(createEmployee("200"));
+function isDirector(employee) {
+    if (employee === Director) {
+        return true;
+    }
+    return false;
+}
+function executeWork(employee) {
+    if (employee === Director) {
+        var director = new Director();
+        return director.workDirectorTasks();
+    }
+    var teacher = new Teacher();
+    return teacher.workTeacherTasks();
+}
+console.log(executeWork(createEmployee("200")));
