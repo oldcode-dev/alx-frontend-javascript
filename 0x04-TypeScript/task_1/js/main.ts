@@ -16,8 +16,8 @@ interface printTeacherFunction {
 }
 
 
- function printTeacher(firstName:string, lastName:string): string{
-    return `${firstName} ${lastName} `;
+ function printTeacher(firstName, lastName){
+    return `${firstName}. ${lastName} `;
 }
 
 // Writing a class
