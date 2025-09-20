@@ -1,11 +1,8 @@
-// const printTeacher: printTeacherFunction = (firstName, lastName) => {
-//     return `${firstName}. ${lastName}`;
-// }
 function printTeacher(firstName, lastName) {
-    if (firstName === void 0) { firstName = "John"; }
-    if (lastName === void 0) { lastName = "Doe"; }
-    return "".concat(firstName, ". ").concat(lastName);
+    firstName = firstName[0].toUpperCase();
+    return "".concat(firstName, ". ").concat(lastName, " ");
 }
+console.log(printTeacher("John", "Doe"));
 var StudentClass = /** @class */ (function () {
     function StudentClass(firstName, lastName) {
         this.firstName = firstName;

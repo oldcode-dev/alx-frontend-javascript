@@ -16,10 +16,12 @@ interface printTeacherFunction {
 }
 
 
- function printTeacher(firstName, lastName){
+ function printTeacher(firstName:string, lastName:string){
+    firstName = firstName[0].toUpperCase();
     return `${firstName}. ${lastName} `;
 }
 
+console.log(printTeacher("John", "Doe"))
 // Writing a class
 
 interface Student {
