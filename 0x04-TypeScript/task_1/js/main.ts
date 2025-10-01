@@ -15,10 +15,11 @@ interface printTeacherFunction {
     (firstName: string, lastName: string): string;
 }
 
-const printTeacher: printTeacherFunction = (firstName: string, lastName: string) => {
+const printTeacher: printTeacherFunction = function (firstName: string, lastName: string) {
     firstName = firstName[0].toUpperCase();
     return `${firstName}. ${lastName}`;
 }
+
 
 
 console.log(printTeacher("John", "Doe"));
@@ -97,8 +98,8 @@ class Teacher implements TeacherInterface {
 }
 
 
-function createEmployee(salary: string){
-    if (parseInt(salary) < 500){
+function createEmployee(salary: string) {
+    if (parseInt(salary) < 500) {
         return new Teacher;
     }
 
