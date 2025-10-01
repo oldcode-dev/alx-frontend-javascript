@@ -1,7 +1,7 @@
-function printTeacher(firstName, lastName) {
+var printTeacher = function (firstName, lastName) {
     firstName = firstName[0].toUpperCase();
-    return "".concat(firstName, ". ").concat(lastName, " ");
-}
+    return "".concat(firstName, ". ").concat(lastName);
+};
 console.log(printTeacher("John", "Doe"));
 var StudentClass = /** @class */ (function () {
     function StudentClass(firstName, lastName) {
