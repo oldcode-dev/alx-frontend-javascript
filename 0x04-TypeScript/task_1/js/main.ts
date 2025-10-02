@@ -12,17 +12,20 @@ interface Director extends Teacher {
 }
 
 interface printTeacherFunction {
-    (firstName: string, lastName: string): string;
+    firstName: string;
+    lastName: string;
 }
 
-function printTeacher(firstName: string, lastName: string):string {
-    firstName = firstName[0].toUpperCase();
+
+
+function printTeacher(teacher: printTeacherFunction):string {
+    const {firstName, lastName} = teacher;
+
     return `${firstName}. ${lastName}`;
 }
 
 
-
-console.log(printTeacher("John", "Doe"));
+printTeacher({firstName: "John", lastName: "Doe"})
 
 // Writing a class
 
