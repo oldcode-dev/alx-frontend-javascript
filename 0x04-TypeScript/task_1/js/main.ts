@@ -18,14 +18,10 @@ interface printTeacherFunction {
 
 
 
-function printTeacher(teacher: printTeacherFunction):string {
-    const {firstName, lastName} = teacher;
-
+function printTeacher(firstName:string, lastName: string) {
     return `${firstName}. ${lastName}`;
 }
 
-
-printTeacher({firstName: "John", lastName: "Doe"})
 
 // Writing a class
 
